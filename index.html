@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sunit by vxst</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Sunit</h1>
+        <p>A simple, thread-safe unit test library </p>
+
+        <p class="view"><a href="https://github.com/vxst/sunit">View the Project on GitHub <small>vxst/sunit</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/vxst/sunit/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/vxst/sunit/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/vxst/sunit">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="simple-unit" class="anchor" href="#simple-unit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Unit</h1>
+
+<p>A thread safe, extremely simple unit test tool.</p>
+
+<h2>
+<a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install</h2>
+
+<pre><code>cd src
+make install
+</code></pre>
+
+<h2>
+<a id="how-to-remove" class="anchor" href="#how-to-remove" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to remove</h2>
+
+<pre><code>cd src
+make remove
+</code></pre>
+
+<h2>
+<a id="how-to-link" class="anchor" href="#how-to-link" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to link</h2>
+
+<p>cc program.c -o program -lsunit</p>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<ul>
+<li>void sassert(int success, sunit_t test_case)</li>
+</ul>
+
+<p>Assert a condition</p>
+
+<ul>
+<li>void sassert_equal(double a, double b, sunit_t test_case)</li>
+</ul>
+
+<p>Assert double equal(relative error: 1e-8)</p>
+
+<ul>
+<li>void sassert_not_equal(double a, double b, sunit_t test_case)</li>
+</ul>
+
+<p>Assert double not equal</p>
+
+<ul>
+<li>void sassert_equal_f(float a, float b, sunit_t test_case)</li>
+</ul>
+
+<p>Assert float equal(relative error: 1e-4)</p>
+
+<ul>
+<li>void sassert_not_equal_f(float a, float b, sunit_t test_case)</li>
+</ul>
+
+<p>Assert float not equal</p>
+
+<ul>
+<li>void sinit_std(const char* title, sunit_t* test_case_ptr)</li>
+</ul>
+
+<p>Init a testcase: to stderr and stdout</p>
+
+<ul>
+<li>void sinit(const char* title, sunit_t* test_case_ptr, FILE* output, FILE* error)</li>
+</ul>
+
+<p>Init a testcase</p>
+
+<ul>
+<li>void sfinal(sunit_t* test_case_ptr)</li>
+</ul>
+
+<p>Print result and delete a testcase</p>
+
+<blockquote>
+<p>Copyright (C) 2015  Shan Ting <a href="mailto:vxst@vxst.org">vxst@vxst.org</a></p>
+
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+</blockquote>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/vxst">vxst</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
