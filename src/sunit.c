@@ -32,6 +32,8 @@ void sassert(int success, sunit_t test_case){
 
 void sassert_equal(double a, double b, sunit_t test_case){
 	/* So that the maxiumn relative error is bigger than 1e-8 */
+	if(fabs(fmin(a,b)) < 1e-12){
+		return fabs(fmax(a,b)) < 1e-8;
 	if(fabs(a-b)/fmin(a,b) > 1e-8){
 		fprintf(test_case->error, "SASSERT ERROR %s, %d case", test_case->title,
 				test_case->success_count + test_case->fail_count + 1);
@@ -42,6 +44,8 @@ void sassert_equal(double a, double b, sunit_t test_case){
 }
 
 void sassert_not_equal(double a, double b, sunit_t test_case){
+	if(fabs(fmin(a,b)) < 1e-12){
+		return fabs(fmax(a,b)) > 1e-8;
 	if(fabs(a-b)/fmin(a,b) < 1e-8){
 		fprintf(test_case->error, "SASSERT ERROR %s, %d case", test_case->title,
 				test_case->success_count + test_case->fail_count + 1);
@@ -52,6 +56,8 @@ void sassert_not_equal(double a, double b, sunit_t test_case){
 }
 
 void sassert_equal_f(float a, float b, sunit_t test_case){
+	if(fabsf(fminf(a,b)) < 1e-6f){
+		return fabsf(fmaxf(a,b)) < 1e-4f;
 	if(fabsf(a-b)/fminf(a,b) > 1e-4f){
 		fprintf(test_case->error, "SASSERT ERROR %s, %d case", test_case->title,
 				test_case->success_count + test_case->fail_count + 1);
@@ -62,6 +68,8 @@ void sassert_equal_f(float a, float b, sunit_t test_case){
 }
 
 void sassert_not_equal_f(float a, float b, sunit_t test_case){
+	if(fabsf(fminf(a,b)) < 1e-6f){
+		return fabsf(fmaxf(a,b)) > 1e-4f;
 	if(fabsf(a-b)/fminf(a,b) < 1e-4f){
 		fprintf(test_case->error, "SASSERT ERROR %s, %d case", test_case->title,
 				test_case->success_count + test_case->fail_count + 1);
