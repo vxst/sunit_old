@@ -27,31 +27,38 @@ cc program.c -o program -lsunit
 How to use
 ------------------------
 
- * void sassert(int success, sunit\_t test\_case);
+ * void sassert(int success, sunit\_t test\_case)
+
 Assert a condition
 
- * void sassert\_equal(double a, double b, sunit\_t test\_case);
+ * void sassert\_equal(double a, double b, sunit\_t test\_case)
+
 Assert double equal(relative error: 1e-8)
 
- * void sassert\_not\_equal(double a, double b, sunit_t test_case);
+ * void sassert\_not\_equal(double a, double b, sunit\_t test\_case)
+
 Assert double not equal
 
- * void sassert\_equal\_f(float a, float b, sunit_t test_case);
+ * void sassert\_equal\_f(float a, float b, sunit\_t test\_case)
+
 Assert float equal(relative error: 1e-4)
 
- * void sassert\_not\_equal\_f(float a, float b, sunit\_t test_case);
+ * void sassert\_not\_equal\_f(float a, float b, sunit\_t test\_case)
+
 Assert float not equal
 
- * void sinit\_std(const char\* title, sunit_t\* test\_case\_ptr);
+ * void sinit\_std(const char\* title, sunit_t\* test\_case\_ptr)
+
 Init a testcase: to stderr and stdout
 
- * void sinit(const char\* title, sunit\_t\* test\_case\_ptr, FILE\* output, FILE\* error);
+ * void sinit(const char\* title, sunit\_t\* test\_case\_ptr, FILE\* output, FILE\* error)
+
 Init a testcase
 
- * void sfinal(sunit_t\* test_case_ptr);
+ * void sfinal(sunit_t\* test_case_ptr)
+
 Print result and delete a testcase
 
-#endif
 
 > Copyright (C) 2015  Shan Ting <vxst@vxst.org>
 > 
